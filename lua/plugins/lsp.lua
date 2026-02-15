@@ -7,6 +7,7 @@ return {
 			"williamboman/mason-lspconfig.nvim",
 			"saghen/blink.cmp",
 			"nvim-java/nvim-java",
+			"SmiteshP/nvim-navic",
 		},
 		config = function()
 			-- Initialize Java support (configures Lombok and Spring Boot automatically)
@@ -14,7 +15,11 @@ return {
 			require("mason").setup()
 
 			-- LSP Keybindings
-			local on_attach = function(_, bufnr)
+			local on_attach = function(client, bufnr)
+				if client.server_capabilities.documentSymbolProvider then
+					require("nvim-navic").attach(client, bufnr)
+				end
+
 				local opts = { buffer = bufnr, silent = true }
 				vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 				vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)

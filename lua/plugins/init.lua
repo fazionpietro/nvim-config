@@ -32,4 +32,6 @@ require("lazy").setup({
 	{ import = "plugins.editor" },
 	{ import = "plugins.aerial" },
 	{ import = "plugins.telescope" },
+	{ import = "plugins.nvim-navic" },
+	{ import = "plugins.dashboard" },
 })

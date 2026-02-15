@@ -12,6 +12,8 @@ vim.opt.termguicolors = true
 vim.opt.background = "dark"
 vim.opt.fillchars:append({ eob = " " })
 
+vim.o.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
+
 -- Kitty terminal compatibility
 if vim.env.TERM == "xterm-kitty" or vim.env.TERM == "xterm-256color" then
 	vim.cmd([[let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"]])

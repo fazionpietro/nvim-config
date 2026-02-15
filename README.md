@@ -19,6 +19,7 @@ A modern, modular Neovim configuration optimized for development with LSP suppor
 - **File Management** - Neo-tree file explorer with buffer navigation
 - **Code Formatting** - Automatic formatting with Conform.nvim
 - **Treesitter** - Advanced syntax highlighting and code understanding
+- **Code Context** - Breadcrumbs navigation via nvim-navic
 - **AI Assistance** - Integrated 99 AI agent for code completion
 
 ## Requirements
@@ -131,6 +132,7 @@ nvim/
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) - Buffer/tab line
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs) - Auto close brackets
 - [harpoon](https://github.com/ThePrimeagen/harpoon) - Quick file navigation
+- [nvim-navic](https://github.com/SmiteshP/nvim-navic) - Context/Breadcrumbs
 - [99](https://github.com/ThePrimeagen/99) - AI code completion agent
 
 ### UI & Aesthetics
@@ -141,6 +143,7 @@ nvim/
 - [evergarden](https://github.com/everviolet/nvim) - Nature-inspired theme
 - [lackluster.nvim](https://github.com/slugbyte/lackluster.nvim) - Minimal theme
 - [github-nvim-theme](https://github.com/projekt0n/github-nvim-theme) - GitHub-inspired themes
+- [alpha-nvim](https://github.com/goolord/alpha-nvim) - fast and fully programmable greeter for neovim.
 - [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) - Status line
 - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) - File icons
 
