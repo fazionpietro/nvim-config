@@ -1,14 +1,13 @@
-# Preview
-<img width="2036" height="1353" alt="image" src="https://github.com/user-attachments/assets/32d7e37c-9cc1-4421-b92a-8e6f2ddad214" />
-
----
-
 # Neovim Configuration
 
 A modern, modular Neovim configuration optimized for development with LSP support, advanced autocompletion, and LaTeX editing.
 
 ![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white)
 ![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white)
+
+---
+# Preview
+<img width="2036" height="1353" alt="image" src="https://github.com/user-attachments/assets/32d7e37c-9cc1-4421-b92a-8e6f2ddad214" />
 
 ## Features
 
