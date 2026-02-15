@@ -1,3 +1,8 @@
+# Preview
+<img width="2036" height="1353" alt="image" src="https://github.com/user-attachments/assets/32d7e37c-9cc1-4421-b92a-8e6f2ddad214" />
+
+---
+
 # Neovim Configuration
 
 A modern, modular Neovim configuration optimized for development with LSP support, advanced autocompletion, and LaTeX editing.
