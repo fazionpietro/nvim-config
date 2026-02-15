@@ -1,319 +1,260 @@
-# 🎮 Neovim Configuration Cheatsheet
+# Neovim Configuration Cheatsheet
 
-## 📋 Leader Key
-**Leader:** `<Space>` (il tasto spazio)
+## Leader Key
+**Leader:** `<Space>` (the space key)
 
 ---
 
-## 🪟 NAVIGAZIONE FINESTRE
+## WINDOW NAVIGATION
 
-| Comando | Azione |
+| Command | Action |
 |---------|--------|
-| `Ctrl+h` | Vai alla finestra a sinistra |
-| `Ctrl+j` | Vai alla finestra in basso |
-| `Ctrl+k` | Vai alla finestra in alto |
-| `Ctrl+l` | Vai alla finestra a destra |
-| `Ctrl+↑` | Riduci altezza finestra |
-| `Ctrl+↓` | Aumenta altezza finestra |
-| `Ctrl+←` | Riduci larghezza finestra |
-| `Ctrl+→` | Aumenta larghezza finestra |
+| `Ctrl+h` | Go to left window |
+| `Ctrl+j` | Go to bottom window |
+| `Ctrl+k` | Go to top window |
+| `Ctrl+l` | Go to right window |
+| `Ctrl+↑` | Decrease window height |
+| `Ctrl+↓` | Increase window height |
+| `Ctrl+←` | Decrease window width |
+| `Ctrl+→` | Increase window width |
 
 ---
 
-## 📂 FILE EXPLORER (Neo-tree)
+## FILE EXPLORER (Neo-tree)
 
-| Comando | Azione |
+| Command | Action |
 |---------|--------|
 | `<leader>e` | Toggle file explorer |
-| `<leader>n` | Apri Neo-tree |
+| `<leader>n` | Open Neo-tree |
 
-### Comandi all'interno di Neo-tree:
-- `a` - Crea nuovo file
-- `d` - Elimina file
-- `r` - Rinomina file
-- `c` - Copia file
-- `x` - Taglia file
-- `p` - Incolla file
-- `Enter` - Apri file
-- `q` - Chiudi Neo-tree
-
----
-
-## 📑 BUFFER/TAB (Bufferline)
-
-| Comando | Azione |
-|---------|--------|
-| `Tab` | Buffer successivo |
-| `Shift+Tab` | Buffer precedente |
-| `Alt+→` | Sposta buffer a destra |
-| `Alt+←` | Sposta buffer a sinistra |
-| `<leader>x` | Chiudi buffer corrente |
-| `<leader>bo` | Chiudi tutti tranne il corrente |
-| `<leader>bp` | Pick: scegli quale buffer chiudere |
+### Commands inside Neo-tree:
+- `a` - Create new file
+- `d` - Delete file
+- `r` - Rename file
+- `c` - Copy file
+- `x` - Cut file
+- `p` - Paste file
+- `Enter` - Open file
+- `q` - Close Neo-tree
 
 ---
 
-## 💾 SALVATAGGIO
+## BUFFER/TAB (Bufferline)
 
-| Comando | Azione |
+| Command | Action |
 |---------|--------|
-| `Ctrl+s` (Normal) | Salva file |
-| `Ctrl+s` (Insert) | Salva e torna in Normal mode |
-| `:w` | Salva (comando tradizionale) |
-| `:wa` | Salva tutti i buffer aperti |
+| `Tab` | Next buffer |
+| `Shift+Tab` | Previous buffer |
+| `Alt+→` | Move buffer right |
+| `Alt+←` | Move buffer left |
+| `<leader>x` | Close current buffer |
+| `<leader>bo` | Close all except current |
+| `<leader>bp` | Pick: choose which buffer to close |
 
 ---
 
-## 🔍 LSP (Language Server Protocol)
+## SAVING
 
-| Comando | Azione |
+| Command | Action |
 |---------|--------|
-| `K` | Mostra documentazione |
-| `gd` | Vai alla definizione |
-| `gr` | Mostra riferimenti |
-| `<leader>rn` | Rinomina simbolo |
+| `Ctrl+s` (Normal) | Save file |
+| `Ctrl+s` (Insert) | Save and return to Normal mode |
+| `:w` | Save (traditional command) |
+| `:wa` | Save all open buffers |
+
+---
+
+## LSP (Language Server Protocol)
+
+| Command | Action |
+|---------|--------|
+| `K` | Show documentation |
+| `gd` | Go to definition |
+| `gr` | Show references |
+| `<leader>rn` | Rename symbol |
 | `<leader>ca` | Code action |
-| `<leader>d` | Mostra diagnostica |
-| `[d` | Diagnostica precedente |
-| `]d` | Diagnostica successiva |
+| `<leader>d` | Show diagnostics |
+| `[d` | Previous diagnostic |
+| `]d` | Next diagnostic |
 
-### Comandi LSP aggiuntivi:
+### Additional LSP commands:
 ```vim
-:LspInfo          " Info sui server LSP attivi
-:LspRestart       " Riavvia LSP
-:Mason            " Gestione LSP servers
+:LspInfo          " Info about active LSP servers
+:LspRestart       " Restart LSP
+:Mason            " Manage LSP servers
 ```
 
 ---
 
-## ✨ FORMATTER (Conform.nvim)
+## FORMATTER (Conform.nvim)
 
-| Comando | Azione |
+| Command | Action |
 |---------|--------|
-| `<leader>f` | Formatta file/selezione |
-| Auto-format | Al salvataggio (automatico) |
+| `<leader>f` | Format file/selection |
+| Auto-format | On save (automatic) |
 
 ```vim
-:ConformInfo      " Info sui formatter disponibili
+:ConformInfo      " Info about available formatters
 ```
 
 ---
 
-## 📝 AUTOCOMPLETAMENTO (Blink.cmp)
+## AUTOCOMPLETION (Blink.cmp)
 
-| Comando | Azione |
+| Command | Action |
 |---------|--------|
-| `Enter` | Accetta suggerimento |
-| `Tab` | Suggerimento successivo |
-| `Shift+Tab` | Suggerimento precedente |
-| `↑` | Suggerimento precedente |
-| `↓` | Suggerimento successivo |
-| `Ctrl+Space` | Apri manualmente completamento |
+| `Enter` | Accept suggestion |
+| `Tab` | Next suggestion |
+| `Shift+Tab` | Previous suggestion |
+| `↑` | Previous suggestion |
+| `↓` | Next suggestion |
+| `Ctrl+Space` | Manually open completion |
 
 ---
 
-## 📄 LATEX (VimTeX + Texlab)
+## LATEX (VimTeX + Texlab)
 
-| Comando | Azione |
+| Command | Action |
 |---------|--------|
 | `<leader>tc` | Toggle Table of Contents |
-| `<leader>tv` | Apri/Aggiorna PDF viewer |
-| `<leader>ts` | Ferma compilazione |
-| `<leader>te` | Mostra errori compilazione |
+| `<leader>tv` | Open/Refresh PDF viewer |
+| `<leader>ts` | Stop compilation |
+| `<leader>te` | Show compilation errors |
 
-### Comandi VimTeX:
+### VimTeX commands:
 ```vim
-:VimtexCompile        " Avvia compilazione continua
-:VimtexStop           " Ferma compilazione
-:VimtexView           " Apri PDF
-:VimtexErrors         " Lista errori
-:VimtexClean          " Pulisci file ausiliari
-:VimtexInfo           " Info stato VimTeX
-:VimtexTocToggle      " Toggle indice documento
+:VimtexCompile        " Start continuous compilation
+:VimtexStop           " Stop compilation
+:VimtexView           " Open PDF
+:VimtexErrors         " List errors
+:VimtexClean          " Clean auxiliary files
+:VimtexInfo           " VimTeX status info
+:VimtexTocToggle      " Toggle document index
 ```
 
-**Compilazione:** Automatica al salvataggio (se file .tex)
+**Compilation:** Automatic on save (if .tex file)
 
 ---
 
-## 🤖 AI AGENT (99 by ThePrimeagen)
+## AI AGENT (99 by ThePrimeagen)
 
-⚠️ **Richiede opencode installato!**
+**Requires opencode installed!**
 
-| Comando | Azione |
+| Command | Action |
 |---------|--------|
-| `<leader>9f` | AI completa funzione corrente |
-| `<leader>9v` | AI elabora selezione visuale |
-| `<leader>9s` | Ferma tutte le richieste AI |
-| `<leader>9l` | Visualizza log ultima richiesta |
+| `<leader>9f` | AI completes current function |
+| `<leader>9v` | AI processes visual selection |
+| `<leader>9s` | Stop all AI requests |
+| `<leader>9l` | View last request log |
 
-### Comandi aggiuntivi:
+### Additional commands:
 ```vim
-:lua require("99").view_logs()        " Vedi ultimi log
-:lua require("99").prev_request_logs() " Log richiesta precedente
-:lua require("99").next_request_logs() " Log richiesta successiva
+:lua require("99").view_logs()        " View latest logs
+:lua require("99").prev_request_logs() " Previous request log
+:lua require("99").next_request_logs() " Next request log
 ```
 
-**Tip:** Crea un file `AGENT.md` nella root del progetto per dare contesto all'AI
+**Tip:** Create an `AGENT.md` file in the project root to give context to the AI
 
 ---
 
-## ✏️ MODALITÀ VISUALE
+## VISUAL MODE
 
-| Comando | Azione |
+| Command | Action |
 |---------|--------|
-| `v` | Modalità visual character |
-| `V` | Modalità visual line |
-| `Ctrl+v` | Modalità visual block |
-| `<` | Indenta a sinistra (mantieni selezione) |
-| `>` | Indenta a destra (mantieni selezione) |
-| `y` | Copia selezione |
-| `d` | Taglia selezione |
-| `p` | Incolla dopo selezione |
+| `v` | Visual character mode |
+| `V` | Visual line mode |
+| `Ctrl+v` | Visual block mode |
+| `<` | Indent left (keep selection) |
+| `>` | Indent right (keep selection) |
+| `y` | Copy selection |
+| `d` | Cut selection |
+| `p` | Paste after selection |
 
 ---
 
-## 🔤 MODALITÀ INSERIMENTO
+## INSERT MODE
 
-| Comando | Azione |
+| Command | Action |
 |---------|--------|
-| `i` | Insert mode prima del cursore |
-| `a` | Insert mode dopo il cursore |
-| `I` | Insert mode a inizio riga |
-| `A` | Insert mode a fine riga |
-| `o` | Nuova riga sotto |
-| `O` | Nuova riga sopra |
-| `Esc` / `Ctrl+[` | Torna in Normal mode |
+| `i` | Insert mode before cursor |
+| `a` | Insert mode after cursor |
+| `I` | Insert mode at beginning of line |
+| `A` | Insert mode at end of line |
+| `o` | New line below |
+| `O` | New line above |
+| `Esc` / `Ctrl+[` | Return to Normal mode |
 
 ---
 
-## 🔧 COMANDI UTILI VIM
+## USEFUL VIM COMMANDS
 
-### Ricerca
+### Search
 ```vim
-/pattern          " Cerca avanti
-?pattern          " Cerca indietro
-n                 " Risultato successivo
-N                 " Risultato precedente
-*                 " Cerca parola sotto cursore avanti
-#                 " Cerca parola sotto cursore indietro
+/pattern          " Search forward
+?pattern          " Search backward
+n                 " Next result
+N                 " Previous result
+*                 " Search word under cursor forward
+#                 " Search word under cursor backward
 ```
 
-### Navigazione
+### Navigation
 ```vim
-gg                " Vai a inizio file
-G                 " Vai a fine file
-:123              " Vai a riga 123
-0                 " Inizio riga
-$                 " Fine riga
-w                 " Parola successiva
-b                 " Parola precedente
-%                 " Vai alla parentesi corrispondente
+gg                " Go to beginning of file
+G                 " Go to end of file
+:123              " Go to line 123
+0                 " Beginning of line
+$                 " End of line
+w                 " Next word
+b                 " Previous word
+%                 " Go to matching bracket
 ```
 
 ### Editing
 ```vim
 u                 " Undo
 Ctrl+r            " Redo
-dd                " Cancella riga
-yy                " Copia riga
-p                 " Incolla dopo
-P                 " Incolla prima
-.                 " Ripeti ultimo comando
+dd                " Delete line
+yy                " Copy line
+p                 " Paste after
+P                 " Paste before
+.                 " Repeat last command
 ```
 
 ### Split windows
 ```vim
-:split            " Split orizzontale
-:vsplit           " Split verticale
-:close            " Chiudi finestra corrente
-:only             " Chiudi tutte tranne corrente
+:split            " Horizontal split
+:vsplit           " Vertical split
+:close            " Close current window
+:only             " Close all except current
 ```
 
 ---
 
-## 🎨 PLUGIN INSTALLATI
+## AVAILABLE THEMES
 
-| Plugin | Descrizione |
-|--------|-------------|
-| **lazy.nvim** | Package manager |
-| **VimTeX** | Supporto LaTeX |
-| **LuaSnip** | Engine per snippet |
-| **blink.cmp** | Autocompletamento |
-| **nvim-lspconfig** | Configurazione LSP |
-| **mason.nvim** | Gestore LSP servers |
-| **nvim-treesitter** | Syntax highlighting avanzato |
-| **black-metal-theme** | Tema scuro |
-| **neo-tree** | File explorer |
-| **bufferline** | Tab/Buffer line |
-| **lualine** | Status line |
-| **conform.nvim** | Code formatter |
-| **99** | AI agent per coding |
+### Active Theme
+**black-metal (impaled-nazarene variant)** - Primary dark theme
 
----
+#### Toggle alternative background:
+```vim
+:BlackMetalToggleBg   " Switch between main and alternative background
+```
 
-## 🛠️ COMANDI SISTEMA
+### Other Installed Themes (lazy loaded)
+To change theme, run one of the following commands:
 
 ```vim
-:q                " Esci
-:q!               " Esci senza salvare
-:wq               " Salva ed esci
-:qa               " Esci da tutti i buffer
-:wqa              " Salva tutti ed esci
-
-:e filename       " Apri file
-:bnext / :bn      " Buffer successivo
-:bprev / :bp      " Buffer precedente
-:bd               " Elimina buffer
-
-:term             " Apri terminale
-:help comando     " Aiuto su comando
+:colorscheme vesper                " Vesper theme
+:colorscheme koda                  " Koda theme
+:colorscheme evergarden            " Evergarden (fall variant, green accent)
+:colorscheme lackluster            " Lackluster theme
+:colorscheme github_dark           " GitHub Dark theme
+:colorscheme github_light          " GitHub Light theme
+:colorscheme github_dark_dimmed    " GitHub Dark Dimmed
 ```
-
 ---
 
-## 🎯 TIPS VELOCI
-
-1. **Copia/Incolla da/verso sistema**: Usa `"+y` (copia) e `"+p` (incolla)
-2. **Ricerca e sostituisci**: `:%s/vecchio/nuovo/g`
-3. **Seleziona tutto**: `ggVG`
-4. **Commenta codice**: Usa plugin `Comment.nvim` (da aggiungere)
-5. **Multiple cursors**: Usa visual block (`Ctrl+v`)
-
----
-
-## 📚 RISORSE
-
-- `:help` - Sistema di aiuto integrato
-- `:Tutor` - Tutorial interattivo Vim
-- `:checkhealth` - Diagnostica configurazione Neovim
-- `:Lazy` - Gestione plugin
-- `:Mason` - Gestione LSP/formatter/linter
-
----
-
-## ⚙️ CONFIGURAZIONE
-
-**File principali:**
-```
-~/.config/nvim/
-├── init.lua              # Entry point
-├── lua/
-│   ├── options.lua       # Opzioni generali
-│   ├── keymaps.lua       # Keybindings
-│   ├── plugins.lua       # Plugin configuration
-│   ├── lsp.lua           # LSP config
-│   └── vimtex.lua        # VimTeX config
-└── snippets/             # Custom snippets
-```
-
-**Ricarica configurazione:**
-```vim
-:source ~/.config/nvim/init.lua
-" oppure riavvia Neovim
-```
-
----
-
-**Ultimo aggiornamento:** 2026-02-14
-**Versione configurazione:** Custom Setup v2.0
+**Last updated:** 2026-02-15
+**Configuration version:** Custom Setup v2.0
