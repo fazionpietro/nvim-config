@@ -30,4 +30,6 @@ require("lazy").setup({
 
 	-- Editor enhancements
 	{ import = "plugins.editor" },
+	{ import = "plugins.aerial" },
+	{ import = "plugins.telescope" },
 })

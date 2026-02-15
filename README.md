@@ -6,6 +6,7 @@ A modern, modular Neovim configuration optimized for development with LSP suppor
 ![Lua](https://img.shields.io/badge/lua-%232C2D72.svg?style=for-the-badge&logo=lua&logoColor=white)
 
 ## Preview
+
 <img width="2036" height="1353" alt="image" src="https://github.com/user-attachments/assets/32d7e37c-9cc1-4421-b92a-8e6f2ddad214" />
 
 ## Features
@@ -33,21 +34,25 @@ A modern, modular Neovim configuration optimized for development with LSP suppor
 - **Nerd Font** for icons (recommended: JetBrainsMono Nerd Font, Fira Code)
 
 ### Optional
+
 - **opencode** - Required for 99 AI agent functionality
 
 ## Installation
 
 ### 1. Backup existing configuration
+
 ```bash
 mv ~/.config/nvim ~/.config/nvim.bak
 ```
 
 ### 2. Clone this repository
+
 ```bash
 git clone https://github.com/yourusername/nvim-config.git ~/.config/nvim
 ```
 
 ### 3. Start Neovim
+
 ```bash
 nvim
 ```
@@ -55,12 +60,15 @@ nvim
 Lazy.nvim will automatically install all plugins on first launch.
 
 ### 4. Install LSP servers
+
 After Neovim opens, run:
+
 ```vim
 :Mason
 ```
 
 The following servers should be installed automatically:
+
 - `texlab` (LaTeX)
 - `lua_ls` (Lua)
 - `jdtls` (Java with Lombok + Spring Boot)
@@ -100,21 +108,25 @@ nvim/
 ## Plugins
 
 ### Core
+
 - [lazy.nvim](https://github.com/folke/lazy.nvim) - Plugin manager
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) - LSP configuration
 - [mason.nvim](https://github.com/williamboman/mason.nvim) - LSP server manager
 - [mason-lspconfig.nvim](https://github.com/williamboman/mason-lspconfig.nvim) - Bridge between Mason and LSP
 
 ### Language Support
+
 - [nvim-java](https://github.com/nvim-java/nvim-java) - Java development with Lombok + Spring Boot
 - [VimTeX](https://github.com/lervag/vimtex) - LaTeX editing
 - [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter) - Syntax highlighting
 
 ### Completion & Snippets
+
 - [blink.cmp](https://github.com/saghen/blink.cmp) - Autocompletion
 - [LuaSnip](https://github.com/L3MON4D3/LuaSnip) - Snippet engine
 
 ### Editor Enhancement
+
 - [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim) - File explorer
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) - Buffer/tab line
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs) - Auto close brackets
@@ -122,6 +134,7 @@ nvim/
 - [99](https://github.com/ThePrimeagen/99) - AI code completion agent
 
 ### UI & Aesthetics
+
 - [black-metal-theme](https://github.com/metalelf0/black-metal-theme-neovim) - Dark theme (primary)
 - [vesper.nvim](https://github.com/datsfilipe/vesper.nvim) - Alternative dark theme
 - [koda.nvim](https://github.com/oskarnurm/koda.nvim) - Alternative dark theme
@@ -132,6 +145,7 @@ nvim/
 - [nvim-web-devicons](https://github.com/nvim-tree/nvim-web-devicons) - File icons
 
 ### Formatting
+
 - [conform.nvim](https://github.com/stevearc/conform.nvim) - Code formatter
 
 ## Key Mappings
@@ -139,53 +153,80 @@ nvim/
 **Leader key:** `<Space>`
 
 ### Essential
-| Key | Action |
-|-----|--------|
-| `<C-s>` | Save file (Normal/Insert mode) |
-| `<leader>e` | Toggle file explorer |
-| `<leader>f` | Format file/selection |
+
+| Key          | Action                         |
+| ------------ | ------------------------------ |
+| `<C-s>`      | Save file (Normal/Insert mode) |
+| `<leader>e`  | Toggle file explorer           |
+| `<leader>mp` | Format file/selection          |
+
+### Telescope (Fuzzy Finder)
+
+| Key          | Action                   |
+| ------------ | ------------------------ |
+| `<leader>ff` | Find files in cwd        |
+| `<leader>fr` | Find recent files        |
+| `<leader>fs` | Live grep (find string)  |
+| `<leader>fc` | Find string under cursor |
+| `<leader>fb` | Find buffers             |
+| `<leader>fh` | Find help tags           |
+
+### Harpoon (File Navigation)
+
+| Key              | Action                  |
+| ---------------- | ----------------------- |
+| `<leader>a`      | Add file to Harpoon     |
+| `<C-e>`          | Toggle quick menu       |
+| `<M-h>`          | Toggle quick menu (Alt) |
+| `<M-1>`..`<M-4>` | Select file 1-4         |
+| `<Tab>`          | Next file               |
+| `<S-Tab>`        | Previous file           |
 
 ### LSP
-| Key | Action |
-|-----|--------|
-| `K` | Show documentation |
-| `gd` | Go to definition |
-| `gr` | Show references |
-| `<leader>rn` | Rename symbol |
-| `<leader>ca` | Code action |
-| `<leader>d` | Show diagnostics |
-| `[d` / `]d` | Navigate diagnostics |
+
+| Key          | Action                |
+| ------------ | --------------------- |
+| `K`          | Show documentation    |
+| `gd`         | Go to definition      |
+| `gr`         | Show references       |
+| `<leader>rn` | Rename symbol         |
+| `<leader>ca` | Code action           |
+| `<leader>d`  | Show line diagnostics |
+| `[d` / `]d`  | Navigate diagnostics  |
 
 ### Navigation
-| Key | Action |
-|-----|--------|
-| `<C-h/j/k/l>` | Navigate between windows |
-| `<C-↑/↓/←/→>` | Resize windows |
-| `<Tab>` / `<S-Tab>` | Next/previous buffer |
-| `<M-←/→>` | Move buffer left/right |
+
+| Key                 | Action                   |
+| ------------------- | ------------------------ |
+| `<C-h/j/k/l>`       | Navigate between windows |
+| `<C-↑/↓/←/→>`       | Resize windows           |
+| `<Tab>` / `<S-Tab>` | Next/previous buffer     |
+| `<M-←/→>`           | Move buffer left/right   |
 
 ### Buffers
-| Key | Action |
-|-----|--------|
-| `<leader>x` | Close current buffer |
+
+| Key          | Action                   |
+| ------------ | ------------------------ |
+| `<leader>x`  | Close current buffer     |
 | `<leader>bo` | Close all except current |
-| `<leader>bp` | Pick buffer to close |
+| `<leader>bp` | Pick buffer to close     |
 
 ### LaTeX (VimTeX)
-| Key | Action |
-|-----|--------|
-| `<leader>tc` | Toggle table of contents |
-| `<leader>tv` | View PDF |
-| `<leader>ts` | Stop compilation |
-| `<leader>te` | Show errors |
+
+| Key          | Action                   |
+| ------------ | ------------------------ |
+| `<leader>tt` | Toggle table of contents |
+| `<leader>tv` | View PDF                 |
+| `<leader>tc` | Compile                  |
+| `<leader>ts` | Stop compilation         |
+| `<leader>te` | Show errors              |
 
 ### AI Agent (99)
-| Key | Action |
-|-----|--------|
-| `<leader>9f` | Complete current function |
+
+| Key          | Action                   |
+| ------------ | ------------------------ |
 | `<leader>9v` | Process visual selection |
-| `<leader>9s` | Stop all AI requests |
-| `<leader>9l` | View logs |
+| `<leader>9s` | Stop all AI requests     |
 
 > **Tip:** See [NEOVIM_CHEATSHEET.md](NEOVIM_CHEATSHEET.md) for a complete reference guide.
 
@@ -194,18 +235,21 @@ nvim/
 ### LSP Servers
 
 Configured for the following languages:
+
 - **Java** - jdtls (with Lombok and Spring Boot support via nvim-java)
 - **Python** - pyright
 - **Lua** - lua_ls (with Neovim API support)
 - **LaTeX** - texlab (integrated with VimTeX)
 
 To add more servers:
+
 1. Run `:Mason` and install desired server
 2. Add configuration in `lua/plugins/lsp.lua`
 
 ### Formatting
 
 Conform.nvim is configured for automatic formatting on save. Supported formatters:
+
 - **Lua** - stylua
 - **Python** - black, isort
 - **Java** - google-java-format
@@ -217,6 +261,7 @@ Configure in `lua/plugins/formatting.lua`.
 ### LaTeX Setup
 
 Uses VimTeX + Texlab with:
+
 - **Compiler:** latexmk
 - **PDF Viewer:** Sioyek (change to Zathura in `lua/plugins/lsp.lua` if needed)
 - **Forward/Inverse search** enabled
@@ -225,9 +270,11 @@ Uses VimTeX + Texlab with:
 ### Themes
 
 #### Active Theme
+
 **Black Metal (Impaled Nazarene variant)** - Dark theme optimized for focused coding
 
 Toggle alternative background:
+
 ```vim
 :BlackMetalToggleBg
 ```
@@ -251,6 +298,7 @@ You can switch to any of the installed themes using the `:colorscheme` command:
 The Black Metal theme includes 12 variants inspired by black metal bands. To change the variant, edit `lua/plugins/ui.lua` line 22:
 
 **Available variants:**
+
 - `impaled-nazarene` (current)
 - `venom`
 - `dark-funeral`
@@ -265,12 +313,14 @@ The Black Metal theme includes 12 variants inspired by black metal bands. To cha
 - `nile`
 
 **Example:**
+
 ```lua
 -- In lua/plugins/ui.lua, line 22
 theme = "venom",  -- Change from "impaled-nazarene" to desired variant
 ```
 
 After changing the theme configuration in `lua/plugins/ui.lua`, restart Neovim or run:
+
 ```vim
 :source ~/.config/nvim/init.lua
 ```

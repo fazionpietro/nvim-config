@@ -26,9 +26,9 @@ return {
 				},
 			})
 			-- Manual format keybinding
-			vim.keymap.set({ "n", "v" }, "<leader>f", function()
+			vim.keymap.set({ "n", "v" }, "<leader>mp", function()
 				require("conform").format({ async = true, lsp_fallback = true })
-			end, { desc = "Format file or selection" })
+			end, { desc = "Format file or selection (Make Pretty)" })
 		end,
 	},
 }

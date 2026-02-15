@@ -39,7 +39,7 @@ return {
         ]])
 
 		-- Keymaps
-		vim.keymap.set("n", "<leader>tc", ":VimtexTocToggle<CR>", { desc = "Toggle TOC" })
+		vim.keymap.set("n", "<leader>tt", ":VimtexTocToggle<CR>", { desc = "Toggle TOC" })
 		vim.keymap.set("n", "<leader>tv", ":VimtexView<CR>", { desc = "View PDF" })
 		vim.keymap.set("n", "<leader>tc", ":VimtexCompile<CR>", { desc = "Compile" })
 		vim.keymap.set("n", "<leader>ts", ":VimtexStop<CR>", { desc = "Stop compiler" })
