@@ -15,6 +15,9 @@ return {
 				},
 				filesystem = {
 					follow_current_file = { enabled = true },
+					filtered_items = {
+						visible = true,
+					},
 				},
 			})
 			vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", { desc = "Toggle Explorer" })
