@@ -36,4 +36,5 @@ require("lazy").setup({
 	{ import = "plugins.dashboard" },
 	{ import = "plugins.git" },
 	{ import = "plugins.terminal" },
+	{ import = "plugins.which-key" },
 })

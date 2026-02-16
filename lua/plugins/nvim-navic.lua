@@ -13,7 +13,7 @@ return {
 
 			lsp = {
 				auto_attach = true,
-				preference = nil,
+				preference = { "jdtls", "spring-boot" },
 			},
 		},
 	},
