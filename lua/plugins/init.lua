@@ -34,4 +34,6 @@ require("lazy").setup({
 	{ import = "plugins.telescope" },
 	{ import = "plugins.nvim-navic" },
 	{ import = "plugins.dashboard" },
+	{ import = "plugins.git" },
+	{ import = "plugins.terminal" },
 })

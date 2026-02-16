@@ -98,7 +98,9 @@ nvim/
 │       ├── treesitter.lua            # Syntax highlighting
 │       ├── ui.lua                    # Theme + Lualine + Icons
 │       ├── explorer.lua              # Neo-tree + Bufferline
-│       ├── editor.lua                # Autopairs + Harpoon + 99
+│       ├── editor.lua                # Autopairs + Harpoon + 99 + Surround
+│       ├── git.lua                   # Git integration
+│       ├── terminal.lua              # FTerm
 │       └── vimtex.lua                # LaTeX support
 │
 └── snippets/                         # Custom snippets
@@ -131,9 +133,20 @@ nvim/
 - [neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim) - File explorer
 - [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) - Buffer/tab line
 - [nvim-autopairs](https://github.com/windwp/nvim-autopairs) - Auto close brackets
+- [nvim-surround](https://github.com/kylechui/nvim-surround) - Surrogate pairs mappings
 - [harpoon](https://github.com/ThePrimeagen/harpoon) - Quick file navigation
 - [nvim-navic](https://github.com/SmiteshP/nvim-navic) - Context/Breadcrumbs
 - [99](https://github.com/ThePrimeagen/99) - AI code completion agent
+
+### Git Integration
+
+- [gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) - Git signs in gutter
+- [lazygit.nvim](https://github.com/kdheepak/lazygit.nvim) - LazyGit integration
+- [vim-fugitive](https://github.com/tpope/vim-fugitive) - Git wrapper
+
+### Terminal
+
+- [FTerm.nvim](https://github.com/numToStr/FTerm.nvim) - Floating terminal
 
 ### UI & Aesthetics
 
@@ -223,6 +236,34 @@ nvim/
 | `<leader>tc` | Compile                  |
 | `<leader>ts` | Stop compilation         |
 | `<leader>te` | Show errors              |
+
+### Git
+
+| Key          | Action                   |
+| ------------ | ------------------------ |
+| `<leader>gg` | Open LazyGit             |
+| `]c` / `[c`  | Next/Previous Hunk       |
+| `<leader>hs` | Stage Hunk               |
+| `<leader>hr` | Reset Hunk               |
+| `<leader>hS` | Stage Buffer             |
+| `<leader>hR` | Reset Buffer             |
+| `<leader>hp` | Preview Hunk             |
+| `<leader>hb` | Blame Line               |
+| `<leader>gs` | Git Status (Fugitive)    |
+
+### Terminal
+
+| Key     | Action            |
+| ------- | ----------------- |
+| `<A-i>` | Toggle Terminal   |
+
+### Editing
+
+| Key     | Action            |
+| ------- | ----------------- |
+| `ys`    | Add surround      |
+| `ds`    | Delete surround   |
+| `cs`    | Change surround   |
 
 ### AI Agent (99)
 

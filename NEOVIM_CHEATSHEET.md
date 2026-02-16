@@ -128,6 +128,17 @@
 
 ---
 
+## SURROUND (nvim-surround)
+
+| Command            | Action                        |
+| ------------------ | ----------------------------- |
+| `ys<motion><char>` | Add surround (e.g. `ysiw"`)   |
+| `ds<char>`         | Delete surround (e.g. `ds"`)  |
+| `cs<old><new>`     | Change surround (e.g. `cs"'`) |
+| `S<char>`          | Add surround in Visual mode   |
+
+---
+
 ## LATEX (VimTeX + Texlab)
 
 | Command      | Action                   |
@@ -153,6 +164,31 @@
 
 ---
 
+## GIT INTEGRATION (Fugitive, Gitsigns, Lazygit)
+
+| Command      | Action                |
+| ------------ | --------------------- |
+| `<leader>gg` | Open LazyGit          |
+| `<leader>gs` | Git Status (Fugitive) |
+| `]c`         | Next Hunk             |
+| `[c`         | Previous Hunk         |
+| `<leader>hs` | Stage Hunk            |
+| `<leader>hr` | Reset Hunk            |
+| `<leader>hS` | Stage Buffer          |
+| `<leader>hR` | Reset Buffer          |
+| `<leader>hp` | Preview Hunk          |
+| `<leader>hb` | Blame Line            |
+
+---
+
+## TERMINAL (FTerm)
+
+| Command | Action          |
+| ------- | --------------- |
+| `<A-i>` | Toggle Terminal |
+
+---
+
 ## AI AGENT (99 by ThePrimeagen)
 
 **Requires opencode installed!**
@@ -163,14 +199,6 @@
 | `<leader>9v` | AI processes visual selection |
 | `<leader>9s` | Stop all AI requests          |
 | `<leader>9l` | View last request log         |
-
-### Additional commands:
-
-```vim
-:lua require("99").view_logs()        " View latest logs
-:lua require("99").prev_request_logs() " Previous request log
-:lua require("99").next_request_logs() " Next request log
-```
 
 **Tip:** Create an `AGENT.md` file in the project root to give context to the AI
 
