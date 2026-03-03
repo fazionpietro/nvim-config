@@ -122,6 +122,20 @@ return {
 							},
 						})
 					end,
+					-- Rust (rust_analyzer)
+					["rust_analyzer"] = function()
+						lspconfig.rust_analyzer.setup({
+							capabilities = capabilities,
+							on_attach = on_attach,
+							settings = {
+								["rust-analyzer"] = {
+									checkOnSave = {
+										command = "clippy",
+									},
+								},
+							},
+						})
+					end,
 				},
 			})
 		end,
